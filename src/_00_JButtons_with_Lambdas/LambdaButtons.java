@@ -1,9 +1,11 @@
 package _00_JButtons_with_Lambdas;
 
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class LambdaButtons {
 	private JFrame window = new JFrame();
@@ -20,6 +22,15 @@ public class LambdaButtons {
 		
 		//1. Call the addActionListener methods for each button. Use lambdas
 		//   to define to functionality of the buttons.
+		
+		
+		addNumbers.addActionListener((ActionEvent e)->{String i1 = JOptionPane.showInputDialog("Input a number"); 
+		String i2 = JOptionPane.showInputDialog("Input a number");
+		int itotal = Integer.parseInt(i1);
+		JOptionPane.showMessageDialog(null, "Your two numbers added together are \n\n" + (itotal+Integer.parseInt(i2)));
+		});
+		
+		
 		
 		window.setVisible(true);
 		window.pack();
