@@ -53,7 +53,7 @@ public class LambdaMethods {
 	
 		printCustomMessage((s)->{
 			for(int i = 0; i < s.length(); i++) {
-				if (!(s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) == 'i' || s.charAt(i) == 'o' || s.charAt(i) == 'u')) {
+				if (!(s.toLowerCase().charAt(i) == 'a' || s.toLowerCase().charAt(i) == 'e' || s.toLowerCase().charAt(i) == 'i' || s.toLowerCase().charAt(i) == 'o' || s.toLowerCase().charAt(i) == 'u')) {
 					System.out.print(s.charAt(i));
 				}
 			}
