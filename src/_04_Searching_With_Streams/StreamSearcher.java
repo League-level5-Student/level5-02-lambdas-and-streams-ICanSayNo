@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.stream.Stream;
 
+import javax.swing.JOptionPane;
+
 public class StreamSearcher {
 	// 1. This method takes an array of Strings and a String. The method returns the number
 	// of times the String parameter appears in the String array. This method will
@@ -11,11 +13,15 @@ public class StreamSearcher {
 	public long containsCount(String[] strArr, String strToCount) {
 		//2. Convert the String array to a stream
 		
+		Stream<String> str = Arrays.stream(strArr);
+		
 		//3. Use the filter method with a lambda to extract all the String
 		//   elements that match the String parameter.
 		
+		str = str.filter(x->x.equals(strToCount));
+		
 		//4. Return the count of the filtered stream.
 		
-		return 0;
+		return str.count();
 	}
 }
